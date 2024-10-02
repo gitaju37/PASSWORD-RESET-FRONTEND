@@ -23,7 +23,7 @@ const ChangePassword = () => {
 
     try {
       const payloads = { pwdverifyString, newPassword };
-      const response = await axios.post( "http://localhost:4000/user/changepassword", payloads );
+      const response = await axios.post( "https://password-reset-po28.onrender.com/user/changepassword", payloads );
       if ( response.status === 200 ) {
         toast.success( "Password reset successfully!" );
         setPwdVerifyString( "" );

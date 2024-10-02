@@ -17,7 +17,7 @@ const Login = () => {
     const userLogin = async () => {
         const payloads = { email, password };
         try {
-            const response = await axios.post( 'http://localhost:4000/user/login', payloads );
+            const response = await axios.post( 'https://password-reset-po28.onrender.com/user/login', payloads );
             if ( response.status === 200 ) {
                 toast.success( response.data.message );
                 setEmail( "" );

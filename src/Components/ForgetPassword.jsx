@@ -15,7 +15,7 @@ const ForgetPassword = () => {
   }
   const forgotPassword = async () => {
     try {
-      const response = await axios.post( "http://localhost:4000/user/fgpassword", { email } )
+      const response = await axios.post( "https://password-reset-po28.onrender.com/user/fgpassword", { email } )
       console.log( email )
       if ( response.status === 200 ) {
         toast.success( response.data.message );

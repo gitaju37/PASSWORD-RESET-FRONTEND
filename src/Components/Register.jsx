@@ -18,7 +18,7 @@ const Register = () => {
     const userRegister = async () => {
         const payloads = { userName, email, password }
         try {
-            const response = await axios.post( "http://localhost:4000/user/register", payloads );
+            const response = await axios.post( "https://password-reset-po28.onrender.com/user/register", payloads );
             if ( response.status === 201 ) {
                 toast.success( response.data.message );
                 setUserName( "" )
